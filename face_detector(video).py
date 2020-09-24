@@ -1,7 +1,10 @@
+#imports
 import cv2, time
 
+#Use CascadeClassifier  to define how a face looks like to the computer
 face_cascade = cv2.CascadeClassifier("haarcascade_frontalface_default.xml")
 
+#Start capturing Video
 video = cv2.VideoCapture(0)
 
 while True:
