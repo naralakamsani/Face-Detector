@@ -9,7 +9,8 @@ video = cv2.VideoCapture(0)
 
 while True:
     check, frame = video.read()
-
+    
+    #Apply grey filter to each frame
     grey_frame = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
 
     faces = face_cascade.detectMultiScale(grey_frame, scaleFactor=1.1, minNeighbors=5)
