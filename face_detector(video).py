@@ -12,7 +12,8 @@ while True:
     
     #Apply grey filter to each frame
     grey_frame = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
-
+    
+    #Detect if the current frame contains a face
     faces = face_cascade.detectMultiScale(grey_frame, scaleFactor=1.1, minNeighbors=5)
 
     for x, y, w, h in faces:
