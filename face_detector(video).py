@@ -23,11 +23,13 @@ while True:
     #Show the frame after box on the face has been applied
     cv2.imshow("video", frame)
 
-
+    #Reads the input from keyboard
     key = cv2.waitKey(1)
 
+    #quit when q is pressed
     if key == ord('q'):
         break
-
+        
+#Close al windows and stop recording
 video.release()
 cv2.destroyAllWindows()
