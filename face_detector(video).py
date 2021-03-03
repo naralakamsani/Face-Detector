@@ -1,17 +1,20 @@
 import cv2, time
 
+#variable declaration
 consistent_face = 0
 x_old = 0
 y_old = 0
-
 face_cascade = cv2.CascadeClassifier("haarcascade_frontalface_default.xml")
 video = cv2.VideoCapture(0)
 
 while True:
+    #Taker the video input
     check, frame = video.read()
-
+    
+    #convert to gray scale
     grey_frame = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
 
+    #Identify faces from video feed
     faces = face_cascade.detectMultiScale(grey_frame, scaleFactor=1.1, minNeighbors=5)
 
     for x, y, w, h in faces:
